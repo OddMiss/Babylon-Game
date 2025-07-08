@@ -1,0 +1,818 @@
+{
+  "asset": {
+    "generator": "Babylon.js v8.15.1",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "village_data.bin",
+      "byteLength": 3116
+    }
+  ],
+  "nodes": [
+    {
+      "name": "camera",
+      "translation": [
+        -8.735312388668193e-16,
+        4.635254915624212,
+        -14.265847744427303
+      ],
+      "rotation": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "camera": 0
+    },
+    {
+      "name": "light"
+    },
+    {
+      "name": "ground",
+      "mesh": 0
+    },
+    {
+      "name": "box_merged",
+      "translation": [
+        6.8,
+        0,
+        2.5
+      ],
+      "rotation": [
+        0,
+        0.0980171403295606,
+        0,
+        0.9951847266721969
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "box_merged",
+      "translation": [
+        4.5,
+        0,
+        3
+      ],
+      "rotation": [
+        0,
+        0.0980171403295606,
+        0,
+        0.9951847266721969
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house0",
+      "translation": [
+        6.8,
+        0,
+        2.5
+      ],
+      "rotation": [
+        0,
+        0.0980171403295606,
+        0,
+        0.9951847266721969
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "house1",
+      "translation": [
+        4.5,
+        0,
+        3
+      ],
+      "rotation": [
+        0,
+        0.0980171403295606,
+        0,
+        0.9951847266721969
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house2",
+      "translation": [
+        1.5,
+        0,
+        4
+      ],
+      "rotation": [
+        0,
+        0.0980171403295606,
+        0,
+        0.9951847266721969
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house3",
+      "translation": [
+        -1.5,
+        0,
+        6
+      ],
+      "rotation": [
+        0,
+        0.49999999999999994,
+        0,
+        0.8660254037844387
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house4",
+      "translation": [
+        6.4,
+        0,
+        -1.5
+      ],
+      "rotation": [
+        0,
+        0.995184726672197,
+        0,
+        -0.0980171403295608
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house5",
+      "translation": [
+        4.1,
+        0,
+        -1
+      ],
+      "rotation": [
+        0,
+        0.995184726672197,
+        0,
+        -0.0980171403295608
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "house6",
+      "translation": [
+        2.1,
+        0,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0.995184726672197,
+        0,
+        -0.0980171403295608
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house7",
+      "translation": [
+        0,
+        0,
+        -1
+      ],
+      "rotation": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650897
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "house8",
+      "translation": [
+        -0.5,
+        0,
+        -3
+      ],
+      "rotation": [
+        0,
+        0.8090169943749477,
+        0,
+        0.5877852522924731
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "house9",
+      "translation": [
+        -0.75,
+        0,
+        -5
+      ],
+      "rotation": [
+        0,
+        0.7330518718298265,
+        0,
+        0.6801727377709192
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house10",
+      "translation": [
+        -0.75,
+        0,
+        -7
+      ],
+      "rotation": [
+        0,
+        0.766044443118978,
+        0,
+        0.6427876096865394
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "house11",
+      "translation": [
+        -4.75,
+        0,
+        -1
+      ],
+      "rotation": [
+        0,
+        0.7357239106731316,
+        0,
+        -0.6772815716257411
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house12",
+      "translation": [
+        -4.5,
+        0,
+        -3
+      ],
+      "rotation": [
+        0,
+        0.7212024473438146,
+        0,
+        -0.6927243535095994
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "house13",
+      "translation": [
+        -4.75,
+        0,
+        -5
+      ],
+      "rotation": [
+        0,
+        0.7357239106731316,
+        0,
+        -0.6772815716257411
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house14",
+      "translation": [
+        -4.75,
+        0,
+        -7
+      ],
+      "rotation": [
+        0,
+        0.7357239106731316,
+        0,
+        -0.6772815716257411
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "house15",
+      "translation": [
+        -5.25,
+        0,
+        2
+      ],
+      "rotation": [
+        0,
+        0.49999999999999994,
+        0,
+        0.8660254037844387
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "house16",
+      "translation": [
+        -6,
+        0,
+        4
+      ],
+      "rotation": [
+        0,
+        0.49999999999999994,
+        0,
+        0.8660254037844387
+      ],
+      "mesh": 1
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2
+          },
+          "material": 0,
+          "mode": 4,
+          "indices": 0
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "material": 1,
+          "mode": 4,
+          "indices": 3
+        },
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "material": 2,
+          "mode": 4,
+          "indices": 7
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13,
+            "TEXCOORD_0": 14
+          },
+          "material": 3,
+          "mode": 4,
+          "indices": 11
+        },
+        {
+          "attributes": {
+            "POSITION": 16,
+            "NORMAL": 17,
+            "TEXCOORD_0": 18
+          },
+          "material": 4,
+          "mode": 4,
+          "indices": 15
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    }
+  ],
+  "scene": 0,
+  "cameras": [
+    {
+      "type": "perspective",
+      "name": "camera",
+      "perspective": {
+        "aspectRatio": 0.6932330827067669,
+        "yfov": 0.8,
+        "znear": 1,
+        "zfar": 10000
+      }
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 48,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 48,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 96,
+      "byteLength": 32,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 128,
+      "byteLength": 504,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 632,
+      "byteLength": 504,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1136,
+      "byteLength": 336,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1472,
+      "byteLength": 504,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1976,
+      "byteLength": 504,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2480,
+      "byteLength": 336,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2816,
+      "byteLength": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2828,
+      "byteLength": 72
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2900,
+      "byteLength": 72
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2972,
+      "byteLength": 72
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3044,
+      "byteLength": 72
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 9,
+      "componentType": 5123,
+      "count": 6,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "min": [
+        -7.5,
+        0,
+        -8
+      ],
+      "max": [
+        7.5,
+        0,
+        8
+      ],
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5123,
+      "count": 36,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3",
+      "min": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "max": [
+        0.5,
+        1,
+        0.5
+      ],
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3",
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC2",
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5123,
+      "count": 36,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC3",
+      "min": [
+        -0.6000000238418579,
+        0.9762500524520874,
+        -0.5629165172576904
+      ],
+      "max": [
+        0.6000000238418579,
+        1.7074999809265137,
+        0.5629165172576904
+      ],
+      "normalized": false,
+      "byteOffset": 288
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC3",
+      "normalized": false,
+      "byteOffset": 288
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC2",
+      "normalized": false,
+      "byteOffset": 192
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5123,
+      "count": 36,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3",
+      "min": [
+        -1,
+        0,
+        -0.5
+      ],
+      "max": [
+        1,
+        1,
+        0.5
+      ],
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3",
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC2",
+      "normalized": false,
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5123,
+      "count": 36,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC3",
+      "min": [
+        -1.2000000476837158,
+        0.9762500524520874,
+        -0.5629165172576904
+      ],
+      "max": [
+        1.2000000476837158,
+        1.7074999809265137,
+        0.5629165172576904
+      ],
+      "normalized": false,
+      "byteOffset": 288
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC3",
+      "normalized": false,
+      "byteOffset": 288
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC2",
+      "normalized": false,
+      "byteOffset": 192
+    }
+  ],
+  "materials": [
+    {
+      "name": "groundMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0.5,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349
+      }
+    },
+    {
+      "name": "boxMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    },
+    {
+      "name": "roofMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "name": "boxMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 2
+        }
+      }
+    },
+    {
+      "name": "roofMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    },
+    {
+      "source": 1,
+      "sampler": 0
+    },
+    {
+      "source": 2,
+      "sampler": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "images": [
+    {
+      "name": "https://assets.babylonjs.com/environments/cubehouse.png",
+      "uri": "village_img0.png"
+    },
+    {
+      "name": "https://assets.babylonjs.com/environments/roof.jpg",
+      "uri": "village_img1.png"
+    },
+    {
+      "name": "https://assets.babylonjs.com/environments/semihouse.png",
+      "uri": "village_img2.png"
+    }
+  ]
+}
