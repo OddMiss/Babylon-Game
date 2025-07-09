@@ -1,4 +1,4 @@
-Happy Babylon Games!
+Happy Babylon Games 🎉!
 
 # Notes (From official doc)
 
@@ -38,12 +38,11 @@ BABYLON.Color3.Teal();
 
 ## FaceUV
 
-The image contains, in order, images of the same size for the front, right, back and left sides of the house.
+The image contains, in order, images of the same size for the front, right, back and left sides of the house. In the faceUV array faces are numbered 0 for back, 1 front, 2 right, 3 left, 4 top and 5 bottom.
 
 The width of each image is 0.25 of the whole image width. To specify the part of the image to use we give two co-ordinates one for the lower left corner and one for the upper right corner. For the whole image we would use (0, 0) and (1, 1), for part images the co-ordinate values will be a fraction between 0 and 1.
 
-Rather than using two sets of co-ordinates we use a 4 dimensional
-vector (lower left x, lower left y, upper right x, upper right y)
+Rather than using two sets of co-ordinates we use a 4 dimensional vector (lower left x, lower left y, upper right x, upper right y)
 
 Matching sides to part images gives
 front, 1, (0.0, 0.0, 0.25, 1.0)
@@ -59,15 +58,15 @@ as the top and bottom are not seen we will just use the defaults.
 1. synchronous position
 
 ```javascript
-	const boxParent = BABYLON.MeshBuilder.CreateBox("Box", {faceColors:faceColors});
-    const boxChild = BABYLON.MeshBuilder.CreateBox("Box", {size: 0.5, faceColors:faceColors});
-    boxChild.setParent(boxParent);
-    boxChild.position.x = 0;
-    boxChild.position.y = 2;
-    boxChild.position.z = 0;
-    boxParent.position.x = 2;
-    boxParent.position.y = 0;
-    boxParent.position.z = 0;
+const boxParent = BABYLON.MeshBuilder.CreateBox("Box", {faceColors:faceColors});
+const boxChild = BABYLON.MeshBuilder.CreateBox("Box", {size: 0.5, faceColors:faceColors});
+boxChild.setParent(boxParent);
+boxChild.position.x = 0;
+boxChild.position.y = 2;
+boxChild.position.z = 0;
+boxParent.position.x = 2;
+boxParent.position.y = 0;
+boxParent.position.z = 0;
 ```
 
 ![alt text](/Images/ParentPosition.png)
@@ -112,3 +111,7 @@ boxParent.rotation.z = -Math.PI / 4;
 ```
 
 ![alt text](/Images/ParentPositionRotation2.png)
+
+## Rotation Rules
+
+"right hand rule"
