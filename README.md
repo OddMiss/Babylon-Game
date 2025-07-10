@@ -115,3 +115,7 @@ boxParent.rotation.z = -Math.PI / 4;
 ## Rotation Rules
 
 "right hand rule"
+
+## movPOV direction
+
+![alt text](/Images/movePOV.png)

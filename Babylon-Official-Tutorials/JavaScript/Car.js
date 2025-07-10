@@ -325,3 +325,21 @@ function AnimationShiftCar () {
     scene.beginAnimation(car, 0, 210, true);
     return scene;
 }
+
+function AnimationTurnCar () {
+    const value = AnimationRotationWheels();
+    scene = value.scene;
+    car = value.car;
+    const fps = 30;
+    const runningtime = 4;
+    const stoptime = 2;
+    // const animRotationCar = SetRotationAnimation(fps, 1, "z", false, 2 * Math.PI);
+    const animShiftCarx = SetShiftAnimation(fps, "x", -4, 4, runningtime, stoptime);
+    const animShiftCary = SetShiftAnimation(fps, "y", -4, 4, runningtime, stoptime);
+    car.animations = [];
+    car.animations.push(animShiftCarx);
+    car.animations.push(animShiftCary);
+    // car.animations.push(animRotationCar);
+    scene.beginAnimation(car, 0, fps * (runningtime + stoptime), true);
+    return scene;
+}
