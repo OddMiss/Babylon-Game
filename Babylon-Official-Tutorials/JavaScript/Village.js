@@ -448,8 +448,10 @@ function HousesWithCar () {
     const carwheels = buildWheels(car);
     car.rotation = new BABYLON.Vector3(-Math.PI / 2, 0, Math.PI / 2);
     car.position.y = 0.16;
-    car.position.x = 3.5;
+    car.position.x = 3;
     car.position.z = 8;
+
+    // Car animation
     const animCar = new BABYLON.Animation("carAnimation", "position.z", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
 
     const carKeys = []; 
@@ -496,5 +498,58 @@ function HouseWithCharacter () {
 
 function HouseWithCarAndCharacter () {
     const scene = WalkingCharacter(HousesWithCar());
+    return scene;
+}
+
+function HouseAvoidCrash () {
+    const scene = HousesWithCar();
+    const hitBox = BABYLON.MeshBuilder.CreateBox("carbox", {width: 0.5, height: 0.6, depth: 4.5});
+    const wireMat = new BABYLON.StandardMaterial("wireMat");
+    wireMat.wireframe = true;
+    hitBox.material = wireMat;
+    hitBox.position.x = 3.1;
+    hitBox.position.y = 0.3;
+    hitBox.position.z = -5;
+
+    // Dude
+    BABYLON.SceneLoader.ImportMeshAsync("him", "/scenes/Dude/", "Dude.babylon", scene).then((result) => {
+        var dude = result.meshes[0];
+        dude.scaling = new BABYLON.Vector3(0.008, 0.008, 0.008);
+        
+            
+        dude.position = new BABYLON.Vector3(1.5, 0, -6.9);
+        dude.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(-90), BABYLON.Space.LOCAL);
+        const startRotation = dude.rotationQuaternion.clone();    
+            
+        scene.beginAnimation(result.skeletons[0], 0, 100, true, 1.0);
+
+        let distance = 0;
+        let step = 0.015;
+        let p = 0;
+
+        scene.onBeforeRenderObservable.add(() => {
+            if (carReady) {
+                if (!dude.getChildren()[1].intersectsMesh(hitBox) && scene.getMeshByName("car").intersectsMesh(hitBox)) {
+                    return;
+                }
+                
+            }
+		    dude.movePOV(0, 0, step);
+            distance += step;
+              
+            if (distance > track[p].dist) {
+                    
+                dude.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(track[p].turn), BABYLON.Space.LOCAL);
+                p +=1;
+                p %= track.length; 
+                if (p === 0) {
+                    distance = 0;
+                    dude.position = new BABYLON.Vector3(1.5, 0, -6.9);
+                    dude.rotationQuaternion = startRotation.clone();
+                }
+            }
+			
+        })
+    });
     return scene;
 }

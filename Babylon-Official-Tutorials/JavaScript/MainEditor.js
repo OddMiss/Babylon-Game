@@ -156,5 +156,5 @@ function CreatingSound () {
     return scene;
 }
 function createScenefun() {
-    return HouseWithCarAndCharacter();
+    return HouseAvoidCrash();
 };
