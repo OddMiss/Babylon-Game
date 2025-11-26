@@ -1,4 +1,5 @@
 /*
+(Getting Started - Chapter 3 - Character Animation)
 This time instead of creating another animation object for the character 
 we will change its position and orientation before each frame is rendered.
 

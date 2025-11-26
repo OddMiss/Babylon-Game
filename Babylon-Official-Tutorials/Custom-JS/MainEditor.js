@@ -1,3 +1,6 @@
+// Core scene editor
+// Usage: only change `createScenefun` to display custom scene
+
 function Initialization() {
     // Creates a basic Babylon Scene object
     const scene = new BABYLON.Scene(engine);
@@ -155,6 +158,13 @@ function CreatingSound () {
 
     return scene;
 }
-function createScenefun() {
-    return HouseAvoidCrash();
+
+function createScenefun(CameraUpperBetaLimit=true) { // used in `Main.js`
+    /**** Set camera and light *****/
+    const scene = ValleyVillageSprayFountain();
+    const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
+    camera.attachControl(canvas, true);
+    if (CameraUpperBetaLimit) {camera.upperBetaLimit = Math.PI / 2.2;}
+    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
+    return scene
 };

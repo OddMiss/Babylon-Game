@@ -1,10 +1,12 @@
+// Getting Started - Chapter 3 - Character Animation
+
 function AnimationCharacter () {
     const scene = new BABYLON.Scene(engine);
     const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 50, new BABYLON.Vector3(0, 0, 0));
     camera.attachControl(canvas, true);
     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
     // Dude
-    BABYLON.ImportMeshAsync("./Village/Dude.babylon", scene).then((result) => {
+    BABYLON.ImportMeshAsync("../Village/Dude.babylon", scene).then((result) => {
         var dude = result.meshes[0];
         dude.scaling = new BABYLON.Vector3(0.25, 0.25, 0.25);
         scene.beginAnimation(result.skeletons[0], 0, 100, true, 1.0);
@@ -13,6 +15,7 @@ function AnimationCharacter () {
 }
 
 /*
+(Getting Started - Chapter 3 - A Walk Around The Village)
 A little trickier and using a bit of trial and error for the turns and 
 distance we can achieve a more complicated walk for the character around 
 the village. One reason for using degrees and converting them to radians 
@@ -42,7 +45,7 @@ function WalkingCharacter (scene) {
     track.push(new walk(0, 47))
 
     // Dude
-    BABYLON.SceneLoader.ImportMeshAsync("him", "./Village/", "Dude.babylon", scene).then((result) => {
+    BABYLON.SceneLoader.ImportMeshAsync("him", "../Village/", "Dude.babylon", scene).then((result) => {
         var dude = result.meshes[0];
         dude.scaling = new BABYLON.Vector3(0.032, 0.032, 0.032);
         dude.position = new BABYLON.Vector3(-6, 0, 0); // Initial position

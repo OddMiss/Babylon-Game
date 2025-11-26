@@ -1,3 +1,6 @@
+// Core babylon initialization js
+// with `MainEditor.js`
+
 var canvas = document.getElementById("renderCanvas");
 
 var startRenderLoop = function (engine, canvas) {
@@ -11,7 +14,13 @@ var startRenderLoop = function (engine, canvas) {
 var engine = null;
 var scene = null;
 var sceneToRender = null;
-var createDefaultEngine = function () { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }); };
+var createDefaultEngine = function () { 
+    return new BABYLON.Engine(
+        canvas, true, 
+        { 
+            preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }
+        ); 
+    };
 // var createScene = createScenefun(engine, canvas); // Remove this
 // var createScene = function () { // Original script
 //     // This creates a basic Babylon Scene object (non-mesh)

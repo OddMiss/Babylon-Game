@@ -1,4 +1,5 @@
 /*
+(Getting Started - Chapter 3 - Extruding Polygons)
 The car is going to be a very simple one. The body will be built using 
 the extrudePolygon method. This is another shape that can be built 
 using MeshBuilder. The outline of the shape is drawn in the XZ plane, 
@@ -107,6 +108,7 @@ function CarPrototype () {
 }
 
 /*
+(Getting Started - Chapter 3 - Wheel Animation)
 We will start with a wheel and rotate it about its axle. Remember that in order 
 to have the car the upright we rotated it about the x axis and so the axle is 
 along the y axis of the cylinder.
@@ -257,8 +259,11 @@ function SetRotationAnimation (fps, rate, direction, clockwise, maxAngle) {
     return anim;
 }
 
-// In a similar way to how we animated the wheels we now animate the car 
-// to travel a straight line over 5 secs., stop for 2 secs. and then repeat.
+/*
+(Getting Started - Chapter 3 - Car Animation)
+In a similar way to how we animated the wheels we now animate the car 
+to travel a straight line over 5 secs., stop for 2 secs. and then repeat.
+*/
 function SetShiftAnimation (fps, direction, startposition, endposition, runningtime, stoptime) {
     // fps: Frame rate (frames per second) determining animation smoothness
     // rate: Animation speed multiplier, rate = 0 is not allowed

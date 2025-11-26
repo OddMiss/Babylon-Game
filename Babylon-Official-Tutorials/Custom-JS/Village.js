@@ -1,4 +1,5 @@
 /*
+(Getting Started - Chapter 2 - Basic House)
 Adding a roof would make our box more house like. We need a prism like 
 shape. Luckily we can do that using CreateCylinder. Well the name might 
 imply a cylinder rather than a prism however in using it you need to 
@@ -54,6 +55,7 @@ function HouseTextureSimple () {
 
 
 /*
+(Getting Started - Chapter 2 - Face Materials)
 In the options properties for a box one is faceUV an array of Vector4s. 
 We can use this to obtain a part of the area of an image to apply to 
 one face of the box.
@@ -142,7 +144,7 @@ function HouseTextureFaceUV () {
     return scene;
 }
 
-/******Build Functions***********/
+/******Build Functions*******/
 function buildGround (width, height, color) {
     //color
     const groundMat = new BABYLON.StandardMaterial("groundMat");
@@ -192,14 +194,16 @@ function buildRoof (diameter, height, tessellation,
     roof.position.z = position_z;
 }
 
-function HouseUsingFunctions() {
+function HouseUsingFunctions(ground=true) {
     const scene = new BABYLON.Scene(engine);
 
     /**** Set camera and light *****/
     const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 10, new BABYLON.Vector3(0, 0, 0));
     camera.attachControl(canvas, true);
     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
-    const ground = buildGround(10, 10, new BABYLON.Color3(0.18, 0.47, 0.05));
+    if (ground) {
+        const ground = buildGround(10, 10, new BABYLON.Color3(0.18, 0.47, 0.05));
+    }
     const Semibox = buildBox("SemiboxMat", "semihouse", 
         new BABYLON.Vector4(0.6, 0.0, 1.0, 1.0), 
         new BABYLON.Vector4(0.0, 0.0, 0.4, 1.0), 
@@ -220,12 +224,13 @@ function HouseUsingFunctions() {
         -1.5, 0.5, 0, 1, 1);
     const Detachedroof = buildRoof(1.3, 1.2, 3, 0.75, 1, 1, 0, 0, Math.PI / 2, 0, 1.22, 0);
     const Detachedroof2 = buildRoof(1.3, 1.2, 3, 0.75, 1, 1, 0, 0, Math.PI / 2, -1.5, 1.22, 0);
-    const   Semiroof =   buildRoof(1.3, 1.2, 3, 0.75, 2, 1, 0, 0, Math.PI / 2, 2, 1.22, 0);
+    const Semiroof =   buildRoof(1.3, 1.2, 3, 0.75, 2, 1, 0, 0, Math.PI / 2, 2, 1.22, 0);
     const house = BABYLON.Mesh.MergeMeshes([Detachedbox2, Detachedroof2]); // TODD (https://doc.babylonjs.com/features/featuresDeepDive/mesh/mergeMeshes/)
     return scene;
 }
 
 /*
+(Getting Started - Chapter 2 - Making Copies)
 The two main ways to copy a mesh is to clone it or create an instance of it. 
 Cloning gives you an independent copy of a mesh whereas an instance is still 
 linked to the original for its material. You cannot change the material of an 
@@ -294,8 +299,10 @@ const buildRoofOfficial = (width) => {
 }
 
 /******Build Functions***********/
-const buildDwellings = () => {
-    const ground = buildGround(20, 20, new BABYLON.Color3(0.18, 0.47, 0.05));
+const buildDwellings = (ground=true) => {
+    if (ground) {
+        const ground = buildGround(20, 20, new BABYLON.Color3(0.18, 0.47, 0.05));
+    }
 
     const detached_house = buildHouseOfficial(1);
     detached_house.rotation.y = -Math.PI / 16;
@@ -341,18 +348,20 @@ const buildDwellings = () => {
     }
 }
 
-function HouseCopies(){
+function HouseCopies(ground=true){
+    // resourse defination is necessary
     const scene = new BABYLON.Scene(engine);
 
+    // But camera and light can be defined at last
     /**** Set camera and light *****/
-    const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
-    camera.attachControl(canvas, true);
-    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
-    buildDwellings();
+    // const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
+    // camera.attachControl(canvas, true);
+    // const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
+    buildDwellings(ground);
     return scene;
 }
 
-function HouseImportGLB() {
+function HouseImportGLB() { // Imported from official resources
     const scene = new BABYLON.Scene(engine);
     const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
     camera.attachControl(canvas, true);
@@ -362,6 +371,7 @@ function HouseImportGLB() {
 }
 
 // Web Viewer (from glb file)
+// (Getting Started - Chapter 2 - The Viewer)
 /*
 <html>
   <head>
@@ -385,6 +395,7 @@ function HouseImportGLB() {
 */
 
 /*
+(Getting Started - Chapter 2 - Face Materials)
 In the options properties for a box one is faceUV an array of 
 Vector4s. We can use this to obtain a part of the area of an 
 image to apply to one face of the box.
@@ -394,6 +405,7 @@ In the faceUV array faces are numbered 0 for back, 1 front,
 */
 
 /*
+(Getting Started - Chapter 1 - Working with Models)
 1. When you add a model to a scene, you are loading it through the browser. 
 As you likely already know, loading anything from a website is an 
 asynchronous function. Therefore, before you can do anything with your 
@@ -442,8 +454,8 @@ function Village () {
     return scene;
 }
 
-function HousesWithCar () {
-    const scene = HouseCopies();
+function HousesWithCar (ground=true) {
+    const scene = HouseCopies(ground);
     const car = buildCar();
     const carwheels = buildWheels(car);
     car.rotation = new BABYLON.Vector3(-Math.PI / 2, 0, Math.PI / 2);
@@ -491,65 +503,13 @@ function HousesWithCar () {
     return scene;
 }
 
-function HouseWithCharacter () {
-    const scene = WalkingCharacter(HouseCopies());
+function HouseWithCharacter (ground=true) {
+    // `WalkingCharacter` is in `Character.js`
+    const scene = WalkingCharacter(HouseCopies(ground));
     return scene;
 }
 
-function HouseWithCarAndCharacter () {
-    const scene = WalkingCharacter(HousesWithCar());
-    return scene;
-}
-
-function HouseAvoidCrash () {
-    const scene = HousesWithCar();
-    const hitBox = BABYLON.MeshBuilder.CreateBox("carbox", {width: 0.5, height: 0.6, depth: 4.5});
-    const wireMat = new BABYLON.StandardMaterial("wireMat");
-    wireMat.wireframe = true;
-    hitBox.material = wireMat;
-    hitBox.position.x = 3.1;
-    hitBox.position.y = 0.3;
-    hitBox.position.z = -5;
-
-    // Dude
-    BABYLON.SceneLoader.ImportMeshAsync("him", "/scenes/Dude/", "Dude.babylon", scene).then((result) => {
-        var dude = result.meshes[0];
-        dude.scaling = new BABYLON.Vector3(0.008, 0.008, 0.008);
-        
-            
-        dude.position = new BABYLON.Vector3(1.5, 0, -6.9);
-        dude.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(-90), BABYLON.Space.LOCAL);
-        const startRotation = dude.rotationQuaternion.clone();    
-            
-        scene.beginAnimation(result.skeletons[0], 0, 100, true, 1.0);
-
-        let distance = 0;
-        let step = 0.015;
-        let p = 0;
-
-        scene.onBeforeRenderObservable.add(() => {
-            if (carReady) {
-                if (!dude.getChildren()[1].intersectsMesh(hitBox) && scene.getMeshByName("car").intersectsMesh(hitBox)) {
-                    return;
-                }
-                
-            }
-		    dude.movePOV(0, 0, step);
-            distance += step;
-              
-            if (distance > track[p].dist) {
-                    
-                dude.rotate(BABYLON.Axis.Y, BABYLON.Tools.ToRadians(track[p].turn), BABYLON.Space.LOCAL);
-                p +=1;
-                p %= track.length; 
-                if (p === 0) {
-                    distance = 0;
-                    dude.position = new BABYLON.Vector3(1.5, 0, -6.9);
-                    dude.rotationQuaternion = startRotation.clone();
-                }
-            }
-			
-        })
-    });
+function HouseWithCarAndCharacter (ground=true) {
+    const scene = WalkingCharacter(HousesWithCar(ground));
     return scene;
 }

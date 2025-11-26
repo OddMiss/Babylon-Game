@@ -2,6 +2,8 @@ Happy Babylon Games 🎉!
 
 # Notes (From official doc)
 
+> See [Home | Babylon.js Documentation](https://doc.babylonjs.com/)
+
 ## Mesh
 
 Whether you are creating a whole world or just placing one model into a web page you need a scene to contain the world or model, a camera to view it, a light to illuminate it and, of course, at least one viewable object as a model. All models, whether just a box or a complex character, are made from a mesh of triangles or facets.
@@ -20,7 +22,9 @@ You can read more about the engine class here.
 
 ## Coordinate system
 
-- ←(-) →(+) width (x) (vertical),  ↑(+) ↓(-) height (y) (vertical), ↑(+) ↓(-) depth (z) (Horizon)
+- ←(-) →(+) width (x) (vertical)
+- ↑(+) ↓(-) height (y) (vertical)
+- ↑(+) ↓(-) depth (z) (Horizon)
 
 ![alt text](./Images/Coordinate-System.png)
 
@@ -122,3 +126,31 @@ boxParent.rotation.z = -Math.PI / 4;
 ## movPOV direction
 
 ![alt text](./Images/movePOV.png)
+
+## Distant Hills
+
+![alt text](./Images/villageheightmap.png)
+
+> has a large black area in the middle to host the village, the white areas create the hills and the gray ones ways out of the valley for roads.
+
+![alt text](./Images/valley1.png)
+
+## Lathe
+
+The profile is described, in an array, using the x and y components of a 3D vector.
+
+![1764070422195](./Images/FountainCurve.png)
+
+```javascript
+// The array is used in shape property of the options parameter in the CreateLathe method.
+const fountainProfile = [
+	new BABYLON.Vector3(0, 0, 0),
+	new BABYLON.Vector3(10, 0, 0),
+	new BABYLON.Vector3(10, 4, 0),
+	new BABYLON.Vector3(8, 4, 0),
+	new BABYLON.Vector3(8, 1, 0),
+	new BABYLON.Vector3(1, 2, 0),
+	new BABYLON.Vector3(1, 15, 0),
+	new BABYLON.Vector3(3, 17, 0)
+];
+```

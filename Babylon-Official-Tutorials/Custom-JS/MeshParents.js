@@ -1,4 +1,5 @@
 /*
+(Getting Started - Chapter 3 - Mesh Parents)
 Using merge meshes to combine them would result in the wheels not 
 being able to rotate. Instead we set the body of the car as a parent 
 of each wheel.

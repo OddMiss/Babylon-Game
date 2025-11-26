@@ -1,0 +1,20 @@
+{
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.pptx": "default",
+        "*.docx": "docxreader.docxEditor",
+        "*.mlx": "default",
+        "*.xlsx": "cweijan.officeViewer",
+        "*.pdf": "pdf.preview",
+        "*.csv": "gc-excelviewer-csv-editor",
+        "*.png": "imagePreview.previewEditor",
+        "*.jpg": "imagePreview.previewEditor",
+        "*.doc": "default",
+        "*.md": "cweijan.markdownViewer",
+        "{git,gitlens}:/**/*.{md,csv}": "default",
+        "*.sql": "sql-notebook",
+        "*.db": "sqlite-viewer.view",
+        "*.xls": "cweijan.officeViewer",
+        "*.babylon": "babylonjs.assetDigest"
+    }
+}
